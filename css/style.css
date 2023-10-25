@@ -1,0 +1,191 @@
+.select{
+  width: 200px;
+  padding: 10px 25px;
+  margin: 10px 1%;
+  background-color: rgb(228,228,228);
+  border-radius: 5px;
+}
+
+/* .header_section {
+  width: 100%;
+  float: left;
+  background-color: #1a1a1a;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  z-index: 01;
+}
+
+.menu_text {
+  float: right;
+  width: auto;
+} */
+
+
+
+/* ul {
+  padding: 0;
+  display: table; 
+  table-layout: fixed;
+  width: 100%;
+  font-size: 80%;
+  margin: 0 3%;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  background-color: #ffeead;
+  display: table-cell;
+  
+  color: #13334c;
+} */
+/* 
+.save{
+  cursor: pointer;
+}
+
+ul.save:hover {
+  color: #d9534f;
+} */
+
+textarea {
+  margin: 10px 0;
+  width: 35%;
+  height: 180px;
+  font-size: 80%;
+  background-color: rgb(243, 241, 181);
+}
+
+#key {
+  margin: 0 0;
+  width: 35%;
+  font-size: 80%;
+  background-color:rgb(243, 241, 181);
+
+}
+
+input {
+  margin: 10px 3%;
+  width: 40%;
+  height: 30px;
+  font-size: 80%;
+  border-radius: 5% 5%/ 10% 10% ;
+}
+
+.memoPad{
+  align-items: flex-start;
+  
+}
+
+.spc{
+  margin: 0px 180px;
+
+  }
+.card{
+  border: 2px solid #053059;
+  border-radius: 5%;
+  width: 30%;
+  margin: 3% 1.5%;
+  background-color: rgba(179, 210, 236, 0.364);
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+td {
+  font-size: 16px;
+  width: 40%;
+  border-radius: 7% 7%/10% 10%  ;
+}
+
+.title{
+  font-weight: bold;
+  height: 35px;
+
+}
+
+.detail{
+  height: 100px;
+}
+
+
+.switch{
+  span{
+    &:first-child{
+      display: block;
+    }
+    &:not(first-child){
+      display: none;
+    }
+  }
+}
+.text1 {
+  font-weight: 600;
+}
+.text2 {
+  display: none;
+}
+.text3 {
+  display: none;
+}
+.text4 {
+  display: none;
+}
+.text5 {
+  display: none;
+}
+.text6 {
+  display: none;
+  font-weight: 600;
+}
+.text7 {
+  display: none;
+}
+.text8 {
+  display: none;
+}
+.text9 {
+  display: none;
+}
+.text10 {
+  display: none;
+  font-weight: 600;
+}
+.text11 {
+  display: none;
+}
+.text12 {
+  display: none;
+}
+.text13 {
+  display: none;
+}
+.text14 {
+  display: none;
+  font-weight: 600;
+}
+.text15 {
+  display: none;
+}
+.text16 {
+  display: none;
+  font-weight: 600;
+}
+.item {
+  text-align: center;
+}
+.container {
+  text-align: center;
+}
+
+h4 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 28px;
+}

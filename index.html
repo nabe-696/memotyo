@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+  <div id="booking" class="ride_section layout_padding">
+    <div class="container">
+      <div class="ride_main">
+
+        <h2 class="ride_text">
+        <span style="color: #f4db31;">メモ作成</span></h2>
+        <h4>全１１問</h4>
+
+        <a class="switch">
+
+          <span class="text1">Whyme 編
+          </span>
+          <span class="text2">人生で美しいと感じたり、ワクワクしたものは？</span>
+          <span class="text3">社会や人に対して特に苛立ちをおぼえるものはなに？</span>
+          <span class="text4">人生におけて大切にしている価値観やものは？</span>
+          <span class="text5">他人とは違う自分の要素を上げるとしたら？</span>
+          <span class="text6">Who What編</span>
+          <span class="text7">現在考えている、卒業制作、事業内容は？</span>
+          <span class="text8">どういう原体験、考えがあってそれにしたの？</span>
+          <span class="text9">その事業テーマの業界に関わる、課題や穴場は？</span>
+          <span class="text10">how編</span>
+          <span class="text11">その課題や穴場の具体的な解決方法は？</span>
+          <span class="text12">何の言語や機能を使えば作れそう？</span>
+          <span class="text13">ターゲット層はどこで、どうやって収益を得るの？</span>
+          <span class="text14">最後に</span>
+          <span class="text15">全てのメモを見返して、why me?を言語化してみて</span>
+          <span class="text16">"end"</span>
+          
+
+
+          
+
+          
+        </a>
+        <button id="next">次へ</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <ul class="content">
+      <li class="item">
+          <div  class="memoPad">
+              <div>
+              <input type="text" id="key" style="border: none;">
+              </div>  
+              <div>
+              <textarea id="memo" style="border: none;"></textarea>
+              </div>
+              <div class="spc">
+              <button class="addCard" id="save">Save 💾</button>
+              <!-- <button class="addCard" id="clear">Delete 🗑️</button> -->
+              <button class="addCard" id="clear">Delete 🗑️</button>
+              
+  
+          </div>
+       </li>       
+   </ul>
+
+  <div id="cards" class="cards">
+        <!-- ここに追加データが挿入される -->
+  </div>
+ 
+        
+
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
+    let id_array =[];
+      let i = 0;
+
+      $("#save").on("click",function(){
+      id_array.push(i);
+      i++;
+      // console.log(id_array);
+      let id_num = id_array.length;
+      // console.log(id_num);
+      const key = $("#key").val();
+      const value = $("#memo").val();
+      localStorage.setItem(key,value);
+      const html = `<table class="card" id="card${id_num}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+      $("#cards").append(html);
+      $("#key").val("");
+      $("#memo").val("")
+
+
+  });
+
+//2.clear クリックイベント
+  $("#clear").on("click",function(){
+      localStorage.clear();
+      // $("#cards").empty();
+      location.reload();
+  });
+
+
+
+//3.ページ読み込み：保存データ取得表示
+  for(let i=0; i<localStorage.length; i++){
+      const key   = localStorage.key(i);
+      const value = localStorage.getItem(key);
+      const html = `<table class="card" id="card${i}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+      $("#cards").append(html);
+  }
+    
+// $(selector).click(function (e) { 
+//   ("#")
+  
+// });
+
+</script>
+<script src="app.js"></script>
+</body>
+</html>
